@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Tech Picks 2026 — Curated Gadgets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #111110;
+    --ink-2: #555550;
+    --ink-3: #999990;
+    --paper: #f8f7f4;
+    --paper-2: #eeecea;
+    --accent: #c84b2f;
+    --accent-light: #f5ece9;
+    --border: rgba(17,17,16,0.10);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(248,247,244,0.92);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span { color: var(--accent); }
+
+  nav { display: flex; gap: 1.75rem; }
+
+  nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-2);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  nav a:hover { color: var(--ink); }
+
+  /* ── Hero ── */
+  .hero {
+    max-width: 680px;
+    margin: 5rem auto 4rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* ── Picks list ── */
+  main {
+    max-width: 780px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Product card ── */
+  .product {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 1.75rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .product:nth-child(2) { animation-delay: 0.05s; }
+  .product:nth-child(3) { animation-delay: 0.10s; }
+  .product:nth-child(4) { animation-delay: 0.15s; }
+  .product:nth-child(5) { animation-delay: 0.20s; }
+  .product:nth-child(6) { animation-delay: 0.25s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .rank {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--paper-2);
+    line-height: 1;
+    padding-top: 4px;
+    user-select: none;
+  }
+
+  .product-body { display: flex; flex-direction: column; gap: 0.6rem; }
+
+  .product-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    background: var(--paper-2);
+    color: var(--ink-3);
+  }
+
+  .tag.best { background: var(--accent-light); color: var(--accent); }
+
+  .stars {
+    font-size: 0.8rem;
+    color: #c8a72f;
+    letter-spacing: -1px;
+  }
+
+  .rating-count { font-size: 0.78rem; color: var(--ink-3); }
+
+  .product h2 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+
+  .product-desc {
+    font-size: 0.92rem;
+    color: var(--ink-2);
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 0.5rem;
+  }
+
+  .price-block { display: flex; align-items: baseline; gap: 8px; }
+
+  .price {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .price-orig {
+    font-size: 0.88rem;
+    color: var(--ink-3);
+    text-decoration: line-through;
+  }
+
+  .discount {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #2a8a3e;
+    background: #eaf5ec;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  .btn-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--ink);
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.18s, transform 0.12s;
+  }
+
+  .btn-buy:hover { background: var(--accent); transform: translateY(-1px); }
+
+  .btn-buy svg { width: 13px; height: 13px; fill: currentColor; }
+
+  .pros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.25rem;
+  }
+
+  .pro {
+    font-size: 0.75rem;
+    color: var(--ink-2);
+    background: var(--paper-2);
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .pro::before {
+    content: '✓';
+    font-size: 0.65rem;
+    color: #2a8a3e;
+    font-weight: 700;
+  }
+
+  /* ── Disclosure ── */
+  .disclosure {
+    font-size: 0.75rem;
+    color: var(--ink-3);
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-3);
+  }
+
+  @media (max-width: 600px) {
+    nav { display: none; }
+    .product { grid-template-columns: 40px 1fr; gap: 0 1rem; }
+    .rank { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">Gear<span>Lab</span></a>
+  <nav>
+    <a href="#">Reviews</a>
+    <a href="#">Deals</a>
+    <a href="#">Newsletter</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Editors' Picks — March 2026</div>
+  <h1>The Best Tech Gadgets Worth Your Money</h1>
+  <p>Tested, ranked, and curated by our team. No filler — only gear that genuinely earns a place on your desk.</p>
+</div>
+
+<main>
+  <div class="section-label">Top picks this month</div>
+
+  <!-- #1 -->
+  <div class="product">
+    <div class="rank">01</div>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="tag best">Best overall</span>
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">4.9 · 12,400 reviews</span>
+      </div>
+      <h2>Sony WH-1000XM6 Headphones</h2>
+      <p class="product-desc">The gold standard in noise cancellation just got better. Multipoint Bluetooth, 40-hour battery, and a soundstage that makes every commute feel like a listening session.</p>
+      <div class="pros">
+        <span class="pro">Best-in-class ANC</span>
+        <span class="pro">40hr battery</span>
+        <span class="pro">Multipoint connect</span>
+        <span class="pro">Foldable design</span>
+      </div>
+      <div class="product-footer">
+        <div class="price-block">
+          <span class="price">$349</span>
+          <span class="price-orig">$399</span>
+          <span class="discount">Save $50</span>
+        </div>
+        <a class="btn-buy" href="#" onclick="return false;">
+          View on Amazon
+          <svg viewBox="0 0 16 16"><path d="M8 0L6.59 1.41 12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- #2 -->
+  <div class="product">
+    <div class="rank">02</div>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="tag">Best value</span>
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">4.8 · 8,200 reviews</span>
+      </div>
+      <h2>Anker 737 Power Bank (24,000mAh)</h2>
+      <p class="product-desc">140W max output. Charges a MacBook Pro in under an hour. Three ports simultaneously, a smart display, and enough juice to keep you off-grid for days.</p>
+      <div class="pros">
+        <span class="pro">140W output</span>
+        <span class="pro">3 ports</span>
+        <span class="pro">Smart display</span>
+        <span class="pro">Airline safe</span>
+      </div>
+      <div class="product-footer">
+        <div class="price-block">
+          <span class="price">$89</span>
+          <span class="price-orig">$110</span>
+          <span class="discount">Save 19%</span>
+        </div>
+        <a class="btn-buy" href="#" onclick="return false;">
+          View on Amazon
+          <svg viewBox="0 0 16 16"><path d="M8 0L6.59 1.41 12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- #3 -->
+  <div class="product">
+    <div class="rank">03</div>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="tag">Editor's choice</span>
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">4.9 · 5,700 reviews</span>
+      </div>
+      <h2>Logitech MX Master 3S Mouse</h2>
+      <p class="product-desc">Whisper-quiet clicks, a MagSpeed scroll wheel that covers a full page in one flick, and ergonomics refined over a decade. The mouse for people who use computers all day.</p>
+      <div class="pros">
+        <span class="pro">Silent clicks</span>
+        <span class="pro">MagSpeed wheel</span>
+        <span class="pro">Multi-device</span>
+        <span class="pro">USB-C charging</span>
+      </div>
+      <div class="product-footer">
+        <div class="price-block">
+          <span class="price">$99</span>
+        </div>
+        <a class="btn-buy" href="#" onclick="return false;">
+          View on Amazon
+          <svg viewBox="0 0 16 16"><path d="M8 0L6.59 1.41 12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- #4 -->
+  <div class="product">
+    <div class="rank">04</div>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="tag">Most popular</span>
+        <span class="stars">★★★★☆</span>
+        <span class="rating-count">4.7 · 21,000 reviews</span>
+      </div>
+      <h2>Amazon Kindle Paperwhite (16GB)</h2>
+      <p class="product-desc">300 ppi glare-free display, weeks of battery life, and now waterproof to 2 metres. Lighter than a paperback. The definitive reading device, no contest.</p>
+      <div class="pros">
+        <span class="pro">300ppi display</span>
+        <span class="pro">Waterproof</span>
+        <span class="pro">6-week battery</span>
+        <span class="pro">16GB storage</span>
+      </div>
+      <div class="product-footer">
+        <div class="price-block">
+          <span class="price">$149</span>
+          <span class="price-orig">$169</span>
+          <span class="discount">Save $20</span>
+        </div>
+        <a class="btn-buy" href="#" onclick="return false;">
+          View on Amazon
+          <svg viewBox="0 0 16 16"><path d="M8 0L6.59 1.41 12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- #5 -->
+  <div class="product">
+    <div class="rank">05</div>
+    <div class="product-body">
+      <div class="product-meta">
+        <span class="tag">Best upgrade</span>
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">4.8 · 3,800 reviews</span>
+      </div>
+      <h2>Samsung 49" Odyssey G9 Monitor</h2>
+      <p class="product-desc">A 32:9 ultrawide that replaces two 27" monitors. 240Hz refresh, 1ms response, Dual QHD resolution. Overkill by design — and that's exactly the point.</p>
+      <div class="pros">
+        <span class="pro">240Hz refresh</span>
+        <span class="pro">Dual QHD</span>
+        <span class="pro">1ms response</span>
+        <span class="pro">USB-C 90W</span>
+      </div>
+      <div class="product-footer">
+        <div class="price-block">
+          <span class="price">$999</span>
+          <span class="price-orig">$1,299</span>
+          <span class="discount">Save $300</span>
+        </div>
+        <a class="btn-buy" href="#" onclick="return false;">
+          View on Amazon
+          <svg viewBox="0 0 16 16"><path d="M8 0L6.59 1.41 12.17 7H0v2h12.17l-5.58 5.59L8 16l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclosure">
+    <strong>Affiliate disclosure:</strong> GearLab participates in the Amazon Associates programme and other affiliate networks. If you click a link and make a purchase, we may earn a small commission at no extra cost to you. Our editorial recommendations are independent — we only feature products we genuinely rate.
+  </p>
+</main>
+
+<footer>
+  © 2026 GearLab · All rights reserved · <a href="#" style="color: var(--ink-3);">Privacy</a> · <a href="#" style="color: var(--ink-3);">Affiliate Disclosure</a>
+</footer>
+
+</body>
+</html>
